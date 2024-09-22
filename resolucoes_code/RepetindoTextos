@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class RepetirTexto {
+    public static void main(String[] args) {
+        // Cria um objeto Scanner para ler a entrada do usuário
+        Scanner scanner = new Scanner(System.in);
+        
+        // Solicita ao usuário para inserir a string
+        System.out.print("Digite a string: ");
+        String texto = scanner.nextLine();
+        
+        // Solicita ao usuário para inserir o número de repetições
+        System.out.print("Digite o número de vezes para repetir: ");
+        int vezes = scanner.nextInt();
+        
+        // Constrói a string repetida
+        StringBuilder resultado = new StringBuilder();
+        for (int i = 0; i < vezes; i++) {
+            resultado.append(texto);
+            // Adiciona um espaço se não for a última repetição
+            if (i < vezes - 1) {
+                resultado.append(" ");
+            }
+        }
+        
+        // Exibe o resultado
+        System.out.println("Texto repetido: " + resultado.toString());
+        
+        // Fecha o scanner
+        scanner.close();
+    }
+}

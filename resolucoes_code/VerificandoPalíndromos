@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class VerificarPalindromo {
+    public static void main(String[] args) {
+        // Cria um objeto Scanner para ler a entrada do usuário
+        Scanner scanner = new Scanner(System.in);
+        
+        // Solicita ao usuário para inserir uma palavra
+        System.out.print("Digite uma palavra: ");
+        String palavra = scanner.nextLine();
+        
+        // Inverte a palavra
+        String palavraInvertida = new StringBuilder(palavra).reverse().toString();
+        
+        // Verifica se a palavra original é igual à palavra invertida
+        if (palavra.equalsIgnoreCase(palavraInvertida)) {
+            System.out.println("A palavra '" + palavra + "' é um palíndromo.");
+        } else {
+            System.out.println("A palavra '" + palavra + "' não é um palíndromo.");
+        }
+        
+        // Fecha o scanner
+        scanner.close();
+    }
+}

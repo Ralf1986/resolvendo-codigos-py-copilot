@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class ConcatenacaoDados {
+    public static void main(String[] args) {
+        // Cria um objeto Scanner para ler a entrada do usuário
+        Scanner scanner = new Scanner(System.in);
+        
+        // Solicita ao usuário para inserir o primeiro dado
+        System.out.print("Digite o primeiro dado: ");
+        String dado1 = scanner.nextLine();
+        
+        // Solicita ao usuário para inserir o segundo dado
+        System.out.print("Digite o segundo dado: ");
+        String dado2 = scanner.nextLine();
+        
+        // Concatena os dados
+        String resultado = dado1 + " " + dado2;
+        
+        // Exibe o resultado
+        System.out.println("Dados concatenados: " + resultado);
+        
+        // Fecha o scanner
+        scanner.close();
+    }
+}
